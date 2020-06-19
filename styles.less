@@ -1,0 +1,51 @@
+@media screen and (min-width: 1280px) {
+    body {
+        overflow: hidden;
+    }
+
+    .section-small {
+        overflow: visible;
+    }
+
+    section:not(.section-small) {
+        overflow: visible;
+    }
+
+    .text-box:not(.main-screen__text-box) {
+        padding: 105px 50px;
+        background: #fff;
+    }
+    
+    .js-screen:not(.main-screen) {
+        position: fixed;
+        top: 100vh;
+        left: 0;
+        z-index: 100;
+        left: 105px;
+        transition: transform 0.5s linear;
+    }
+    
+    .slide-in {
+        transform: translateY(-100vh);
+    }
+    
+    .text-box.slide-in {
+        transform: translateY(-40vh);
+    }
+
+    .development {
+        width: calc(100vw - 105px);
+        margin: 0;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    
+    footer {
+        position: fixed;
+        z-index: 100;
+        left: 105px;
+        right: 0;
+        width: calc(100vw - 105px);
+        transition: transform 0.5s linear;
+    }
+}
